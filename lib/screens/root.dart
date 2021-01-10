@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:zapUi/screens/call_page.dart';
 import 'package:zapUi/screens/camera_page.dart';
-import 'package:zapUi/screens/chat_page.dart';
+import 'package:zapUi/screens/chat/chat_page.dart';
 import 'package:zapUi/screens/settings_page.dart';
 import 'package:zapUi/screens/status_page.dart';
 import 'package:zapUi/theme/colors.dart';
