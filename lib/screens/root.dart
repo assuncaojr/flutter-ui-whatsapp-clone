@@ -21,12 +21,12 @@ class _RootAppState extends State<RootApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: bgColor,
-      body: getBody(),
-      bottomNavigationBar: getFooter(),
+      body: renderBoby(),
+      bottomNavigationBar: renderFooter(),
     );
   }
 
-  Widget getBody() {
+  Widget renderBoby() {
     return IndexedStack(
       index: pageIndex,
       children: [
@@ -39,7 +39,7 @@ class _RootAppState extends State<RootApp> {
     );
   }
 
-  Widget getFooter() {
+  Widget renderFooter() {
     List navigationItems = [
       { "label": "Satus", "icon": LineIcons.circle },
       { "label": "Calls", "icon": LineIcons.phone_square },
