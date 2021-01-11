@@ -4,6 +4,8 @@ import 'package:line_icons/line_icons.dart';
 import 'package:zapUi/data/json.dart';
 import 'package:zapUi/theme/colors.dart';
 
+import 'chat_detail.dart';
+
 class ChatPage extends StatefulWidget {
   ChatPage({Key key}) : super(key: key);
 
@@ -125,7 +127,15 @@ class _ChatPageState extends State<ChatPage> {
         Column(
           children: List.generate(chatMessages.length, (index) => GestureDetector(
             onTap: () {
-              // navigation
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => ChatDetailPage(
+                    name: chatData[index]['name'],
+                    img: chatData[index]['img'],
+                  )
+                )
+              );
             },
             child: Padding(
               padding: EdgeInsets.only(left: 15, right: 15, bottom: 5),
